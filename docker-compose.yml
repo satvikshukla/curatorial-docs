@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  database:
+    container_name: database
+    image: satvikshukla/curatorial-database
+    ports:
+      - 5430:5432
+  
+  backend:
+    container_name: backend
+    image: satvikshukla/curatorial-backend
+    restart: always
+    ports:
+      - 8000:8000
+    depends_on:
+      - database
+    links:
+      - database
+    volumes:
+      - static-content:/usr/data
+
+  frontend:
+    container_name: frontend
+    image: satvikshukla/curatorial-frontend
+    ports:
+      - 5000:5000
+    depends_on:
+      - backend
+    links:
+      - backend
+    volumes:
+      - static-content:/usr/data
+
+volumes:
+  static-content:
+    name: static-content
