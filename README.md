@@ -14,8 +14,11 @@ also with the least effort.
 ### Steps to get the tool up and running
 
 - The only thing necessary to install is Docker. To install if for your platform, refer to the 
-following link: https://docs.docker.com/install/
-- Once docker is up and running, download the `docker-compose.yml` file present in this repository.
+following link: https://docs.docker.com/install/. If you are on Windows and face some issues 
+regarding Hyper-V or virtualization, refer to the following links: 
+https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v, 
+https://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/.
+- Once docker is up and **running**, download the `docker-compose.yml` file present in this repository.
 - Open up terminal on your system and navigate to the location of the download `docker-compose.yml`
 file. (Use this resource if you are unfamilar with navigating to directories through terminal: 
 https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html)
@@ -25,7 +28,9 @@ the application up and running after some automatic downloads.
 Note: In the last step, you might need root priviliges to run the command. If so, run 
 `sudo docker-compose.yml`.
 
-- If successful, you should see `INFO: Accepting connections at http://localhost:5000` in your terminal.
+- If successful, you should see the downloads that were going on have finished and new services
+have started in your terminal with either of `frontend`, `backend`, or `database` showing up
+towards the left side of the terminal. To try out the tool, go to `http://localhost:5000`.
 This implies the process was successfull, open the url in browser to use the tool.
 - To stop the cool, go back to the terminal and press `ctrl + c`.
 
