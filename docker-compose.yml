@@ -15,8 +15,6 @@ services:
       - 8000:8000
     depends_on:
       - database
-    links:
-      - database
     volumes:
       - static-content:/usr/data
 
@@ -26,8 +24,6 @@ services:
     ports:
       - 5000:5000
     depends_on:
-      - backend
-    links:
       - backend
     volumes:
       - static-content:/usr/data
