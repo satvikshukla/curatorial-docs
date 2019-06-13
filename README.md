@@ -19,8 +19,9 @@ regarding Hyper-V or virtualization, refer to the following links:
 https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v, 
 https://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/.
 - Once docker is up and **running**, download the `docker-compose.yml` file present in this repository.
-- Open up terminal on your system and navigate to the location of the download `docker-compose.yml`
-file. (Use this resource if you are unfamilar with navigating to directories through terminal: 
+- Open up terminal (on windows use powershell) on your system and navigate to the location of the download 
+`docker-compose.yml` file. (Use this resource if you are unfamilar with navigating to directories through 
+terminal: 
 https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html)
 - Once you are in the same directory as the file, run the command `docker-compose up`. This should get
 the application up and running after some automatic downloads. 
